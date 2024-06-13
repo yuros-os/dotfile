@@ -1,0 +1,9 @@
+# igone directory
+dconf/
+google-chrome/
+nautilus/
+nvim/
+pulse/
+systemd/
+yay/
+mimeapps.list
