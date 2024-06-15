@@ -1,0 +1,72 @@
+
+window {
+	/*background: url("../../.cache/blurred_wallpaper.png");*/
+	background: rgba( 0,0,0, 0.75);
+	background-size: cover;
+}
+
+
+button {
+	color: #FFFFFF;
+  font-size:13px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: 2rem 2rem;
+	/*border-style: solid;*/
+	background-color: transparent;
+  outline-style: none;
+	/*background-color: rgba(32, 42, 52, 0.5);
+	border: 1px solid rgba( 255, 255,255, 0.2 );
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+button:focus, button:active, button:hover {
+	background-color: #3700B3;
+	outline-style: none;
+}
+
+/* 
+----------------------------------------------------- 
+Buttons
+----------------------------------------------------- 
+*/
+
+#lock {
+	margin: 90px 10px;
+	border-radius: 10px;
+	background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+	margin: 90px 10px;
+	border-radius: 10px;
+	background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+	margin: 90px 10px;
+	border-radius: 10px;
+	background-image: image(url("icons/suspend.png"));
+}
+
+
+#hibernate {
+	margin: 90px 10px;
+	border-radius: 10px;
+	background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+	margin: 90px 10px;
+	border-radius: 10px;
+	background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+	margin: 90px 10px;
+	border-radius: 10px;
+	background-image: image(url("icons/reboot.png"));
+}
+
+

@@ -219,7 +219,7 @@
     "custom/wlogout": {
       "format": "{icon}",
       "format-icons": "\uf011",
-      "on-click": "wlogout"
+      "on-click": "wlogout -b 6 -n"
     }
   }
 }
