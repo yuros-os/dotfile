@@ -330,7 +330,7 @@
 .widget-dnd {
   color: @text-color;
   margin: 8px;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 .widget-dnd > switch {

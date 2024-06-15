@@ -277,20 +277,30 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    /*background-color: #66cc99;*/
+    background-color: #4CBB17;
+    font-weight: 600;
+    transition: .3s;
+    margin-left: 15px;
+    /*color: #2a5c45;*/
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    /*background-color: #f53c3c;*/
+    background-color: rgba(43, 48, 59, 0.7);
+    transition: .3s;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    /*background-color: #90b1b1;*/
+    background-color: rgba(43, 48, 59, 0.7);
+    transition: .3s;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    /*background-color: #51a37a;*/
+    background-color: rgba(43, 48, 59, 0.7);
+    transition: .3s;
 }
 
 #language {
@@ -349,7 +359,6 @@ label:focus {
 #custom-notif{
     background-color: rgba(43, 48, 59, 0.7);
     padding: 0 15px; 
-
 }
 
 #custom-launcher{
