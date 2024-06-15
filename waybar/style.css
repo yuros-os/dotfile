@@ -376,3 +376,35 @@ label:focus {
   border-radius: 50px;
 }
 
+#custom-myterm,
+#custom-store,
+#custom-browsme,
+#custom-fileman {
+  font-size:16px;
+  padding: 0 13px; 
+  background-color: rgba(43, 48, 59, 0.7);
+  transition: 0.3s;
+}
+
+
+#custom-myterm:hover,
+#custom-store:hover,
+#custom-browsme:hover,
+#custom-fileman:hover {
+    color: orangered;
+    transition: 0.3s;
+}
+
+#custom-myterm{
+  border-radius: 20px 0 0 20px;
+  margin-left: 15px;
+  padding-right: 13px;
+}
+
+#custom-browsme{
+  border-radius: 0 20px 20px 0;
+  padding-left: 13px;
+}
+
+
+

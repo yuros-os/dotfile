@@ -13,7 +13,11 @@
         //"custom/media"
         //"hyprland/window"
         "custom/launcher",
-        "clock"
+        "clock",
+        "custom/myterm",
+        "custom/store",
+        "custom/fileman",
+        "custom/browsme"
     ],
     "modules-center": [
         //"sway/window"
@@ -221,6 +225,30 @@
       "format": "{icon}",
       "format-icons": "\uf011",
       "on-click": "wlogout -b 6 -n"
+    },
+    "custom/myterm": {
+      "format": "{icon}",
+      "format-icons": "\uea85",
+      "on-click": "kitty",
+      "tooltip-format": "Terminal"
+    },
+    "custom/store": {
+      "format": "{icon}",
+      "format-icons": "\uf0bd",
+      "on-click": "gnome-software",
+      "tooltip-format": "Application Store"
+    },
+    "custom/fileman": {
+      "format": "{icon}",
+      "format-icons": "\uf07b",
+      "on-click": "nautilus",
+      "tooltip-format": "File Manager"
+    },
+    "custom/browsme": {
+      "format": "{icon}",
+      "format-icons": "\udb81\udd9f",
+      "on-click": "google-chrome-stable",
+      "tooltip-format": "Browser"
     },
     "custom/notif": {
       "tooltip": false,
