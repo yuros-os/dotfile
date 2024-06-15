@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
 sleep 1
-killall -e xdg-desktop-portal-hyprland
-killall -e xdg-desktop-portal-wlr
-killall xdg-desktop-portal
+
+if [[ ! -z $(ps -A | grep xdg-desktop-portal-hyprland) ]]; then
+	killall -e xdg-desktop-portal-hyprland
+fi
+
+if [[ ! -z $(ps -A | grep xdg-desktop-portal-wlr) ]]; then
+	killall -e xdg-desktop-portal-wlr
+fi
+
+if [[ ! -z $(ps -A | grep xdg-desktop-portal) ]]; then
+	killall xdg-desktop-portal
+fi
+
 /usr/lib/xdg-desktop-portal-hyprland &
-sleep 2
+sleep 2 &
 /usr/lib/xdg-desktop-portal &
