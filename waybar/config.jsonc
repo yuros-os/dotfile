@@ -1,23 +1,24 @@
 // -*- mode: jsonc -*-
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    // "position": "left", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 36, // Waybar width
+    //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         //"sway/workspaces",
         //"sway/mode",
         //"sway/scratchpad",
         //"custom/media"
-        "hyprland/window"
+        //"hyprland/window"
+        "custom/launcher",
+        "clock"
     ],
     "modules-center": [
         //"sway/window"
-        "mpd",
         "hyprland/workspaces",
-        "clock"
+        "mpd"
     ],
     "modules-right": [
         //"mpd",
@@ -25,9 +26,9 @@
         "pulseaudio",
         // "network",
         //"power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        //"cpu",
+        //"memory",
+        //"temperature",
         // "backlight",
         //"keyboard-state",
         //"sway/language",
@@ -35,7 +36,8 @@
         //"battery#bat2",
         //"clock",
         //"tray"
-        "network"
+        "network",
+        "custom/wlogout"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -174,25 +176,26 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         //"format-disconnected": "Disconnected ⚠",
-        "format-disconnected": "⚠",
+        //"format-disconnected": "⚠",
+        "format-disconnected": "\udb82\udcfc",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source": " ",
+        "format-source-muted": "  ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "  ",
+            "hands-free": "  ",
+            "headset": "  ",
+            "phone": "  ",
+            "portable": "  ",
+            "car": "  ",
+            "default": ["  ", "  ", "  "]
         },
         "on-click": "pavucontrol"
     },
@@ -207,6 +210,17 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/launcher": {
+      "format": "{icon}  Menu",
+      "format-icons": "\udb80\udd6c",
+      "on-click": "wofi"
+    },
+    "custom/wlogout": {
+      "format": "{icon}",
+      "format-icons": "\uf011",
+      "on-click": "wlogout"
     }
+  }
 }
     
