@@ -346,6 +346,11 @@ label:focus {
     background-color: #0069d4;
 }
 
+#custom-notif{
+    background-color: rgba(43, 48, 59, 0.7);
+    padding: 0 15px; 
+
+}
 
 #custom-launcher{
   background-color: #102C57;
@@ -361,3 +366,4 @@ label:focus {
   padding: 0 15px 0 10px;
   border-radius: 50px;
 }
+
