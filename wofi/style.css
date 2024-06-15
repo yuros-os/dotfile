@@ -7,12 +7,12 @@ border-radius: 10px;
 }
 
 #input {
-margin: 15px 5px;
+margin: 5px 5px 15px 5px;
 padding: 10px 20px;
 border: none;
 color: #d8dee9;
 background-color: #3b4252;
-border-radius: 50px; 
+border-radius: 7px; 
 }
 
 #inner-box {
@@ -39,9 +39,15 @@ color: #d8dee9;
 }
 
 #entry{
-  margin: 7px 0px;
+  margin: 3px 0px;
+}
+
+#entry:before{
+  display: none;
 }
 
 #entry:selected {
-background-color: #3b4252;
+  padding: 10px 15px;
+  background-color: #3b4252;
+  transition: .3s;
 }

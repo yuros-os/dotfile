@@ -214,7 +214,7 @@
     "custom/launcher": {
       "format": "{icon}  Menu",
       "format-icons": "\udb80\udd6c",
-      "on-click": "wofi"
+      "on-click": "wofi --allow-images --show drun"
     },
     "custom/wlogout": {
       "format": "{icon}",
