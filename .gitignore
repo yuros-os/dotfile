@@ -6,4 +6,6 @@ nvim/
 pulse/
 systemd/
 yay/
+btop/
+gtk-3.0/
 mimeapps.list
