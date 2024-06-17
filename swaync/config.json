@@ -48,21 +48,91 @@
     }
   },
   "widgets": [
+    "menubar#label",
+    "volume#input",
+    "backlight",
+    "buttons-grid",
     "inhibitors",
     "title",
-    "dnd",
-    "notifications"
+    "notifications",
+    "dnd"
   ],
   "widget-config": {
+    "menubar#label": {
+      "menu#power-buttons": {
+        "label": "", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": "",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": "",
+            "command": "hyprlock"
+          },
+          {
+            "label": "",
+            "command": "swaymsg exit"
+          },
+          {
+            "label": "",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#risk-switch": {
+        "label": "\udb81\udc83", 
+        "position": "left",
+        "actions": [ 
+          {
+            "label": "Normal",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "Unsafe",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "Paranoia",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      },
+      "menu#recorder": {
+        "label": "\ueba7",
+        "position": "left",
+        "actions": [
+          {
+            "label": "\ue638 audio recorder",
+            "command": "grim"
+          }
+        ]
+      }
+    },
+    "backlight": {
+      "label": "\udb80\udcdf",
+      "device": "intel_backlight",
+      "min": 10
+    },
+    "backlight#KB": {
+      "label": " ",
+      "device": "asus::kbd_backlight",
+      "subsystem": "leds"
+    },
+    "volume#input": {
+      "label": "",
+      "show-per-app": true
+    }, 
     "inhibitors": {
       "text": "Inhibitors",
-      "button-text": "Clear All",
+      "button-text": "Clear",
       "clear-all-button": true
     },
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
-      "button-text": "Clear All"
+      "button-text": "Clear"
     },
     "dnd": {
       "text": "Do Not Disturb"
@@ -78,7 +148,32 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "直",
+          "label": "\uf1eb",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c 'pkexec ~/.config/swaync/scripts/wlan-up'"
+        },
+        {
+          "label": "\udb80\udf18",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c 'pkexec ~/.config/swaync/scripts/ethr-up'"
+        },
+        {
+          "label": "\uf294",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'"
+        },
+        {
+          "label": "\ueb4c",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+          "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "\ueac6",
           "type": "toggle",
           "active": true,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
