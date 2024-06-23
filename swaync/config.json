@@ -86,7 +86,7 @@
 
           {
             "label": "",
-            "command": "systemctl poweroff"
+            "command": "sh -c 'systemctl poweroff'"
           }
         ]
       },
