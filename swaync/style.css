@@ -504,6 +504,7 @@
 
 /* Power options */
 
+/*
 .power{
   font-size: 1rem;
   margin: 10px 0px;
@@ -513,7 +514,7 @@
   padding: 6px 10px;
   border-radius: 100px;
 }
-/*
+
 .power > button:nth-child(1) {
   margin-right: 310px;
   margin-left: 70px;
@@ -547,8 +548,8 @@
   margin-right: 60px;
   margin-left: 320px;
   margin-top: -38px;
-}
-*/
+}*/
+
 
 /* Daemon Class */
 .opsmode,

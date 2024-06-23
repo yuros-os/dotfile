@@ -59,7 +59,7 @@
   ],
   "widget-config": {
     "menubar#label": {
-      "menu#power": {
+      "menu#powmode": {
         "label": "", 
         "position": "right",
         "actions": [ 
