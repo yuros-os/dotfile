@@ -551,31 +551,37 @@
 
 
 /* Daemon Class */
-.daemon{
-  font-size: 1rem;
+.opsmode,
+.secmode,
+.daemode{
+  font-size: .95rem;
   margin-bottom: 10px;
 }
 
-.daemon > button{
+.opsmode > button,
+.secmode > button,
+.daemode > button{
     background: transparent;
     padding: 5px 3px;
 }
 
-.daemon > button:nth-child(odd) {
+.opsmode > button:nth-child(odd),
+.secmode > button:nth-child(odd),
+.daemode > button:nth-child(odd) {
   margin-right: 220px;
   margin-left: 20px;
   margin-top: 10px;
 }
 
-.daemon > button:nth-child(even) {
+.opsmode > button:nth-child(even),
+.secmode > button:nth-child(even),
+.daemode > button:nth-child(even) {
   margin-right: 20px;
   margin-left: 220px;
   margin-top: -36px;
 }
 
 
-.daemon > label {
-  padding: 10px 20px; 
+.daemode > button > label {
+  margin-left: 20px;
 }
-
-

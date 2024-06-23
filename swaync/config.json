@@ -90,58 +90,84 @@
           }
         ]
       },
-      "menu#risk-switch": {
+      "menu#secmode": {
         "label": "\udb81\udc83", 
         "position": "left",
         "actions": [ 
           {
-            "label": "Normal",
-            "command": "powerprofilesctl set performance"
+            "label": "\udb80\udf8f    normal",
+            "command": "daemonize secmode normal"
           },
           {
-            "label": "Unsafe",
-            "command": "powerprofilesctl set balanced"
+            "label": "\udb81\udeea    unsafe",
+            "command": "daemonize secmode unsafe"
           },
           {
-            "label": "Paranoia",
-            "command": "powerprofilesctl set power-saver"
+            "label": "\ue214    critical",
+            "command": "daemonize secmode critial"
+          },
+          {
+            "label": "\uef84     paranoia",
+            "command": "daemonize secmode paranoia"
           }
         ]
       },
-      "menu#daemon": {
-        "label": "\ueba7",
+      "menu#opsmode": {
+        "label": "\udb85\udcde", 
+        "position": "left",
+        "actions": [ 
+          {
+            "label": "\uf135      optimize",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "\udb80\udd6b      balance",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "\udb80\udf2a      ecogreen",
+            "command": "powerprofilesctl set power-saver"
+          },
+          {
+            "label": "\udb80\ude96     gaming",
+            "command": "powef"
+          }
+        ]
+      },
+      "menu#daemode": {
+        "label": "\udb80\udd97",
         "position": "left",
         "actions": [
           {
-            "label": "\uf1eb  wireless",
+            "label": "\uf1eb      wireless",
             "command": "daemonize service wireless"
           },
           {
-            "label": "\udb80\udf18  ehternet",
+            "label": "\udb80\udf18      ethernet",
             "command" :"daemonize service ethernet"
           },
           {
-            "label": "\udb86\ude11  firewall",
+            "label": "\udb86\ude11      firewall",
             "command": "daemonize service firewall"
           },
           {
-            "label": "\udb80\udcb0  bluetooth",
+            "label": "\udb80\udcb0      bluetooth",
             "command": "daemonize service bluetooth"
           },
           {
-            "label" : "\uf0e4  cockpit",
+            "label" : "\uf0e4    cockpit",
             "command": "daemonize service cockpit"
           },
           {
-            "label": "\uea85  sshd",
+            "label": "\uea85      secure shell",
             "command": "daemonize service sshd"
           },
           {
-            "label": "\udb82\udc68  docker",
+            "label": "\udb82\udc68     docker",
             "command": "daemonize service docker"
           },
           {
-            "label": "\uf233 virtualhost",
+            "label": "\uf233      virtualhost",
             "command": "daemonize service virtualization"
           }
         ]
