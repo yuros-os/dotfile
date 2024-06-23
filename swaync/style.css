@@ -501,3 +501,81 @@
 .widget-inhibitors > button:hover {
   background: @noti-bg-hover;
 }
+
+/* Power options */
+
+.power{
+  font-size: 1rem;
+  margin: 10px 0px;
+}
+
+.power > button {
+  padding: 6px 10px;
+  border-radius: 100px;
+}
+
+.power > button:nth-child(1) {
+  margin-right: 310px;
+  margin-left: 70px;
+}
+
+.power > button:nth-child(2) {
+  margin-right: 260px;
+  margin-left: 120px;
+  margin-top: -38px;
+}
+
+.power > button:nth-child(3) {
+  margin-right: 210px;
+  margin-left: 170px;
+  margin-top: -38px;
+}
+
+.power > button:nth-child(4) {
+  margin-right: 160px;
+  margin-left: 220px;
+  margin-top: -38px;
+}
+
+.power > button:nth-child(5) {
+  margin-right: 110px;
+  margin-left: 270px;
+  margin-top: -38px;
+}
+
+.power > button:nth-child(6) {
+  margin-right: 60px;
+  margin-left: 320px;
+  margin-top: -38px;
+}
+
+
+/* Daemon Class */
+.daemon{
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.daemon > button{
+    background: transparent;
+    padding: 5px 3px;
+}
+
+.daemon > button:nth-child(odd) {
+  margin-right: 220px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.daemon > button:nth-child(even) {
+  margin-right: 20px;
+  margin-left: 220px;
+  margin-top: -36px;
+}
+
+
+.daemon > label {
+  padding: 10px 20px; 
+}
+
+

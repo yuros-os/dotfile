@@ -59,22 +59,31 @@
   ],
   "widget-config": {
     "menubar#label": {
-      "menu#power-buttons": {
+      "menu#power": {
         "label": "", 
         "position": "right",
         "actions": [ 
-          {
-            "label": "",
-            "command": "systemctl reboot"
-          },
           {
             "label": "",
             "command": "hyprlock"
           },
           {
             "label": "",
-            "command": "swaymsg exit"
+            "command": "loginctl terminate-user $USER"
           },
+          {
+            "label": "\udb82\udd01", 
+            "command": "systemctl hibernate"
+          },
+          {
+            "label": "\udb82\udd04",
+            "command": "systemctl suspend"
+          },
+          {
+            "label": "",
+            "command": "systemctl reboot"
+          },
+
           {
             "label": "",
             "command": "systemctl poweroff"
@@ -99,13 +108,41 @@
           }
         ]
       },
-      "menu#recorder": {
+      "menu#daemon": {
         "label": "\ueba7",
         "position": "left",
         "actions": [
           {
-            "label": "\ue638 audio recorder",
-            "command": "grim"
+            "label": "\uf1eb  wireless",
+            "command": "daemonize service wireless"
+          },
+          {
+            "label": "\udb80\udf18  ehternet",
+            "command" :"daemonize service ethernet"
+          },
+          {
+            "label": "\udb86\ude11  firewall",
+            "command": "daemonize service firewall"
+          },
+          {
+            "label": "\udb80\udcb0  bluetooth",
+            "command": "daemonize service bluetooth"
+          },
+          {
+            "label" : "\uf0e4  cockpit",
+            "command": "daemonize service cockpit"
+          },
+          {
+            "label": "\uea85  sshd",
+            "command": "daemonize service sshd"
+          },
+          {
+            "label": "\udb82\udc68  docker",
+            "command": "daemonize service docker"
+          },
+          {
+            "label": "\uf233 virtualhost",
+            "command": "daemonize service virtualization"
           }
         ]
       }
@@ -148,36 +185,16 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "\uf1eb",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c 'pkexec ~/.config/swaync/scripts/wlan-up'"
-        },
-        {
-          "label": "\udb80\udf18",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c 'pkexec ~/.config/swaync/scripts/ethr-up'"
-        },
-        {
-          "label": "\uf294",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'"
-        },
-        {
           "label": "\ueb4c",
           "type": "toggle",
           "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+          "command": "sh -c 'pkexec ~/.config/swaync/scripts/scrn-up'"
         },
         {
           "label": "\ueac6",
           "type": "toggle",
           "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+          "command": "sh -c 'pkexec ~/.config/swaync/scripts/dark-up'"
         }
       ]
     }
